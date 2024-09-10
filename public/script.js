@@ -30,24 +30,24 @@ window.onload = function() {
   // Initialize thumbnail (top selector) slider
   var thumbSlider = new Swiper('.thumb-slider', {
     slidesPerView: 'auto',
-    slidesPerView: 8,
     spaceBetween: 5,
     freeMode: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    centerInsufficientSlides: true,
   });
 
   // Initialize main slider
   var mainSlider = new Swiper('.main-slider', {
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 3000,
     },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
     thumbs: {
-      swiper: thumbSlider, // Connect to the thumbnail slider
+      swiper: thumbSlider,
     }
   });

@@ -8,31 +8,132 @@
     display: none;
 }
 
-.play-regular {
-    font-family: "Play", system-ui;
+.carlito-regular {
+    font-family: "Carlito", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
-.play-bold {
-    font-family: "Play", system-ui;
+  }
+  
+  .carlito-bold {
+    font-family: "Carlito", sans-serif;
     font-weight: 700;
     font-style: normal;
-}
+  }
+  
+  .carlito-regular-italic {
+    font-family: "Carlito", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .carlito-bold-italic {
+    font-family: "Carlito", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
 
-.bebas-neue-regular {
-    font-family: "Bebas Neue", system-ui;
+  .livvic-thin {
+    font-family: "Livvic", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .livvic-extralight {
+    font-family: "Livvic", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .livvic-light {
+    font-family: "Livvic", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .livvic-regular {
+    font-family: "Livvic", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
+  }
+  
+  .livvic-medium {
+    font-family: "Livvic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .livvic-semibold {
+    font-family: "Livvic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .livvic-bold {
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .livvic-black {
+    font-family: "Livvic", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .livvic-thin-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .livvic-extralight-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .livvic-light-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .livvic-regular-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .livvic-medium-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .livvic-semibold-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .livvic-bold-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .livvic-black-italic {
+    font-family: "Livvic", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
 
 body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 0 80px;
     min-height: 100vh;
+    font-family: "Carlito", sans-serif;
 }
 
 a {
@@ -59,7 +160,7 @@ nav ul {
 nav ul li {
     margin-right: 40px;
     font-size: 1.5rem;
-    font-family: "Bebas Neue", system-ui;
+    font-family: "Livvic", sans-serif;
 }
 
 nav ul li a {
@@ -102,7 +203,7 @@ nav ul li a:hover {
 
 #about .text h3 {
     font-size: 3.5rem;
-    font-family: "Bebas Neue", system-ui;
+    font-family: "Livvic", sans-serif;
     margin-bottom: 40px;
     color: #0C3C78;
 }
@@ -230,47 +331,66 @@ nav ul li a:hover {
 #industries {
     display: flex;
     justify-content: center;
+    width: 100%;
+    background-color: #151515;
+  
+}
+
+#industries h3 {
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 2rem;
+    margin: 10px 0 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-thickness: 5.5px;
+    text-decoration-color: #0C3C78;
+    text-underline-offset: 8px;
 }
 
 .swiper-thumb .swiper-slide-thumb-active img {
     border-color: #000;
 }
 
+.main-slider {
+    margin-top: 50px;
+}
+
 
 .carousel-container {
-    width: 1300px;
+    max-width: 1200px;
     position: relative;
     padding: 20px;
-    background-color: #f0f0f0;
 }
 
 /* Swiper Slide Style */
 .swiper-slide {
     display: flex;
     align-items: flex-start;
-    padding: 20px;
 }
 
 
 .thumb-slider .swiper-slide {
+    width: 140px;
     flex-direction: column;
     text-align: center;
     align-items: center;
-}
-
-.thumb-slider .swiper-slide img {
-    width: 100px;
-    height: 80px;
-    object-fit: cover;
+    text-align: center;
 }
 
 .slide-content {
     flex: 1;
+    color: #fff;
+    margin-left: 40px;
 }
 
 .slide-content h2 {
     font-size: 2em;
     margin-bottom: 10px;
+    font-family: "Livvic", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .slide-content p {
@@ -304,9 +424,8 @@ nav ul li a:hover {
 }
 
 .slide-image img {
-    width: 80%;
-    height: 500px;
-    border-radius: 10px;
+    width: 562px;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -325,16 +444,30 @@ nav ul li a:hover {
 
 /* Slide Selector (thumbnails) */
 .swiper-thumb {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    font-family: "Carlito", sans-serif;
+    font-weight: 700;
+    color: #fff;
 }
 
 .swiper-thumb img {
-    width: 120px;
-    margin: 0 10px;
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
     cursor: pointer;
     border: 2px solid transparent;
+    object-fit: cover;
+}
+
+.thumb-slider .swiper-slide h5 {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .swiper-thumb img.swiper-slide-thumb-active {
