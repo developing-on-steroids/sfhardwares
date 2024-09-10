@@ -30,8 +30,8 @@ window.onload = function() {
   // Initialize thumbnail (top selector) slider
   var thumbSlider = new Swiper('.thumb-slider', {
     slidesPerView: 'auto',
-    slidesPerView: 6,
-    spaceBetween: 10,
+    slidesPerView: 8,
+    spaceBetween: 5,
     freeMode: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,

@@ -6,7 +6,7 @@
 
 #content {
     display: none;
-  }
+}
 
 .play-regular {
     font-family: "Play", system-ui;
@@ -112,6 +112,36 @@ nav ul li a:hover {
 }
 
 
+/*____________________________________ products section styling ________________________ */
+
+.products_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.product_card {
+    margin-right: 20px;
+    margin-bottom: 50px;
+    width: 200px;
+}
+
+.product_card h5 {
+    text-align: center;
+    width: 100%;
+    overflow: wrap;
+    background-color: #d9d9d9;
+    padding: 15px;
+}
+
+.product_card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
 /* __________________________________________________Loader code______________________________________________  */
 
 .loader {
@@ -119,19 +149,21 @@ nav ul li a:hover {
     height: 48px;
     margin: auto;
     position: relative;
-    transition: transform 1.5s ease-in-out, opacity 1s ease-in-out; /* For zoom-in and fade-out */
-  }
-  
-  .loader svg {
+    transition: transform 1.5s ease-in-out, opacity 1s ease-in-out;
+    /* For zoom-in and fade-out */
+}
+
+.loader svg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    animation: jump7456 0.5s linear infinite; /* Initial bouncing and rotating */
-  }
-  
-  .loader:before {
+    animation: jump7456 0.5s linear infinite;
+    /* Initial bouncing and rotating */
+}
+
+.loader:before {
     content: '';
     width: 48px;
     height: 5px;
@@ -140,130 +172,189 @@ nav ul li a:hover {
     top: 60px;
     left: 0;
     border-radius: 50%;
-    animation: shadow324 0.5s linear infinite; /* Shadow bounce animation */
-  }
-  
-  @keyframes jump7456 {
+    animation: shadow324 0.5s linear infinite;
+    /* Shadow bounce animation */
+}
+
+@keyframes jump7456 {
     15% {
-      transform: rotate(15deg);
+        transform: rotate(15deg);
     }
-  
+
     25% {
-      transform: translateY(15px) rotate(45deg);
+        transform: translateY(15px) rotate(45deg);
     }
-  
+
     50% {
-      transform: translateY(17px) rotate(90deg);
+        transform: translateY(17px) rotate(90deg);
     }
-  
+
     75% {
-      transform: translateY(4px) rotate(135deg);
+        transform: translateY(4px) rotate(135deg);
     }
-  
+
     100% {
-      transform: translateY(0px) rotate(180deg);
+        transform: translateY(0px) rotate(180deg);
     }
-  }
-  
-  @keyframes shadow324 {
-    0%, 100% {
-      transform: scale(1.5, 1);
+}
+
+@keyframes shadow324 {
+
+    0%,
+    100% {
+        transform: scale(1.5, 1);
     }
-  
+
     50% {
-      transform: scale(1, 0.8);
+        transform: scale(1, 0.8);
     }
-  }
-  
-  /* Stopping the bounce and spinning and then zoom-in */
-  .loader.zoom-in svg, .loader.zoom-in:before {
-    animation: none; /* Stop bouncing and rotating */
-  }
-  
-  .loader.zoom-in {
-    transform: scale(1); /* Initially no scale, set by JS */
-    animation: none; /* Ensure no other animations are running */
-  }
+}
+
+/* Stopping the bounce and spinning and then zoom-in */
+.loader.zoom-in svg,
+.loader.zoom-in:before {
+    animation: none;
+}
+
+.loader.zoom-in {
+    transform: scale(1);
+    /* Initially no scale, set by JS */
+    animation: none;
+    /* Ensure no other animations are running */
+}
 
 
 
-  /* indistries carousel styling  */
-  
-  .swiper-thumb .swiper-slide-thumb-active img {
+/* _____________________________indistries carousel styling_________________________________  */
+
+#industries {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-thumb .swiper-slide-thumb-active img {
     border-color: #000;
-  }
-  
-  
-      .carousel-container {
-        max-width: 1200px;
-        margin: 50px auto;
-        position: relative;
-        padding: 20px;
-        background-color: #f0f0f0;
-      }
-  
-      /* Swiper Slide Style */
-      .swiper-slide {
-        display: flex;
-        align-items: center;
-        padding: 20px;
-      }
-  
-      .slide-content {
-        flex: 1;
-      }
-  
-      .slide-content h2 {
-        font-size: 2em;
-        margin-bottom: 10px;
-      }
-  
-      .slide-content p {
-        font-size: 1.1em;
-        margin-bottom: 20px;
-      }
-  
-      .slide-image {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-  
-      .slide-image img {
-        max-width: 100%;
-        border-radius: 10px;
-      }
-  
-      /* Navigation Buttons */
-      .swiper-button-next,
-      .swiper-button-prev {
-        background-color: #333;
-        color: #fff;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-  
-      /* Slide Selector (thumbnails) */
-      .swiper-thumb {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-      }
-  
-      .swiper-thumb img {
-        width: 120px;
-        margin: 0 10px;
-        cursor: pointer;
-        border: 2px solid transparent;
-      }
-  
-      .swiper-thumb img.swiper-slide-thumb-active {
-        border-color: #000;
-      }
-  
-  
+}
+
+
+.carousel-container {
+    width: 1300px;
+    position: relative;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Swiper Slide Style */
+.swiper-slide {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
+.thumb-slider .swiper-slide {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.thumb-slider .swiper-slide img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.slide-content {
+    flex: 1;
+}
+
+.slide-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.slide-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.slide-content img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.slide-content-flex-img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.slide_prod_img {
+    margin-right: 5px;
+    text-align: center;
+}
+
+.slide-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-image img {
+    width: 80%;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slide Selector (thumbnails) */
+.swiper-thumb {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.swiper-thumb img {
+    width: 120px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.swiper-thumb img.swiper-slide-thumb-active {
+    border-color: #000;
+}
+
+/* _________________________ CONTACT section styling _________________________ */
+
+#contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact h5 {
+    width: 50%;
+}
+
+#contact div {
+    border-left: 3px solid black;
+    width: 50%;
+    padding: 50px 20px;
+}
