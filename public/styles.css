@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#content {
+    display: none;
+  }
+
+.play-regular {
+    font-family: "Play", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.play-bold {
+    font-family: "Play", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 80px;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+nav img {
+    width: 150px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 40px;
+    font-size: 1.5rem;
+    font-family: "Bebas Neue", system-ui;
+}
+
+nav ul li a {
+    transition: 0.2s color;
+    color: #0C3C78;
+}
+
+nav ul li a:hover {
+    color: #F33535;
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#hero img {
+    width: 100%;
+    min-width: 1200px;
+    height: auto;
+}
+
+#hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#about {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about .text {
+    width: 40%;
+}
+
+#about .text h3 {
+    font-size: 3.5rem;
+    font-family: "Bebas Neue", system-ui;
+    margin-bottom: 40px;
+    color: #0C3C78;
+}
+
+#about .text p {
+    font-size: 1.1rem;
+}
+
+
+/* __________________________________________________Loader code______________________________________________  */
+
+.loader {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    position: relative;
+    transition: transform 1.5s ease-in-out, opacity 1s ease-in-out; /* For zoom-in and fade-out */
+  }
+  
+  .loader svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: jump7456 0.5s linear infinite; /* Initial bouncing and rotating */
+  }
+  
+  .loader:before {
+    content: '';
+    width: 48px;
+    height: 5px;
+    background: #253050;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow324 0.5s linear infinite; /* Shadow bounce animation */
+  }
+  
+  @keyframes jump7456 {
+    15% {
+      transform: rotate(15deg);
+    }
+  
+    25% {
+      transform: translateY(15px) rotate(45deg);
+    }
+  
+    50% {
+      transform: translateY(17px) rotate(90deg);
+    }
+  
+    75% {
+      transform: translateY(4px) rotate(135deg);
+    }
+  
+    100% {
+      transform: translateY(0px) rotate(180deg);
+    }
+  }
+  
+  @keyframes shadow324 {
+    0%, 100% {
+      transform: scale(1.5, 1);
+    }
+  
+    50% {
+      transform: scale(1, 0.8);
+    }
+  }
+  
+  /* Stopping the bounce and spinning and then zoom-in */
+  .loader.zoom-in svg, .loader.zoom-in:before {
+    animation: none; /* Stop bouncing and rotating */
+  }
+  
+  .loader.zoom-in {
+    transform: scale(1); /* Initially no scale, set by JS */
+    animation: none; /* Ensure no other animations are running */
+  }
+  
