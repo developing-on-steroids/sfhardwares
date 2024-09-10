@@ -22,3 +22,32 @@ window.onload = function() {
     }, 1500); // Matches the 1.5s zoom-in transition
   }, 1500); // Wait for a few seconds (e.g., 3 bounces) before starting the zoom-in
 };
+
+
+
+// carousel code 
+
+  // Initialize thumbnail (top selector) slider
+  var thumbSlider = new Swiper('.thumb-slider', {
+    slidesPerView: 'auto',
+    slidesPerView: 6,
+    spaceBetween: 10,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+
+  // Initialize main slider
+  var mainSlider = new Swiper('.main-slider', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: thumbSlider, // Connect to the thumbnail slider
+    }
+  });
