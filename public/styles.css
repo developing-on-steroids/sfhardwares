@@ -4,8 +4,22 @@
     box-sizing: border-box;
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: #DA1212;
+  }
+  
+  ::selection {
+    color: #fff;
+    background: #DA1212;
+  }
+
 #content {
     display: none;
+}
+
+#content a:hover {
+    text-decoration: underline;
 }
 
 .carlito-regular {
@@ -159,8 +173,10 @@ nav ul {
 
 nav ul li {
     margin-right: 40px;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
     font-family: "Livvic", sans-serif;
+    font-weight: 700;
 }
 
 nav ul li a {
@@ -177,43 +193,31 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-}
-
-#hero img {
-    width: 100%;
-    min-width: 1200px;
-    height: auto;
-}
-
-#hero h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#about {
-    display: flex;
-    justify-content: space-between;
-}
-
-#about .text {
-    width: 40%;
-}
-
-#about .text h3 {
-    font-size: 3.5rem;
-    font-family: "Livvic", sans-serif;
-    margin-bottom: 40px;
-    color: #0C3C78;
-}
-
-#about .text p {
-    font-size: 1.1rem;
+    background-image: url("https://placehold.co/1300x400");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
 }
 
 
 /*____________________________________ products section styling ________________________ */
+
+#products {
+    margin: 100px 0 70px 0;
+}
+
+#products h3 {
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 50px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-thickness: 5.5px;
+    text-decoration-color: #F33535;
+    text-underline-offset: 8px;
+}
 
 .products_container {
     display: flex;
@@ -223,23 +227,34 @@ nav ul li a:hover {
 }
 
 .product_card {
-    margin-right: 20px;
+    margin-right: 50px;
     margin-bottom: 50px;
     width: 200px;
+    border: 1px solid #151515;
 }
 
 .product_card h5 {
     text-align: center;
     width: 100%;
     overflow: wrap;
-    background-color: #d9d9d9;
     padding: 15px;
+    text-transform: uppercase;
+    border: 1px solid #151515;
+    /* font-size: 1.1rem; */
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.product_card h5:hover {
+    background-color: #151515;
+    color: #fff;
 }
 
 .product_card img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+    width: 100%;
+    /* height: 200px;
+    object-fit: cover; */
 }
 
 
@@ -341,7 +356,7 @@ nav ul li a:hover {
     font-weight: 700;
     color: #fff;
     font-size: 2rem;
-    margin: 10px 0 20px;
+    margin: 10px 0 20px 0;
     text-transform: uppercase;
     text-decoration: underline;
     text-decoration-thickness: 5.5px;
@@ -432,7 +447,7 @@ nav ul li a:hover {
 /* Navigation Buttons */
 .swiper-button-next,
 .swiper-button-prev {
-    background-color: #333;
+    background-color: #0C3C78;
     color: #fff;
     border-radius: 50%;
     width: 40px;
@@ -440,6 +455,8 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    --swiper-navigation-size: 20px;
+    --swiper-navigation-sides-offset: -50px;
 }
 
 /* Slide Selector (thumbnails) */
@@ -483,11 +500,49 @@ nav ul li a:hover {
 }
 
 #contact h5 {
-    width: 50%;
+    width: 30%;
+    font-size: 2.5rem;
+    font-family: "Livvic", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-thickness: 5.5px;
+    text-decoration-color: #F33535;
+    text-underline-offset: 8px;
 }
 
 #contact div {
     border-left: 3px solid black;
-    width: 50%;
-    padding: 50px 20px;
+    width: 70%;
+    padding: 50px 80px;
+}
+
+#contact h4 {
+    color: #0C3C78;
+    font-family: "Livvic", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+iframe {
+    margin-top: 50px;
+}
+
+/* _________________________________ Quote section ______________________________________ */
+
+#quote {
+    text-transform: uppercase;
+    font-family: "Livvic", sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: #0C3C78;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+#quote span {
+    color: #000;
 }
