@@ -798,20 +798,38 @@ iframe {
 
 /* _________________________________ Quote section ______________________________________ */
 
-#quote {
+#about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+#about img {
+    width: 300px;
+}
+
+#about div:first-of-type {
+    max-width: 600px;
+}
+
+#about h1 {
     text-transform: uppercase;
     font-family: "Livvic", sans-serif;
     font-weight: 900;
-    font-size: 3.02rem;
+    font-size: 2.5rem;
     color: #0C3C78;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
+    margin-bottom: 25px;
 }
 
-#quote span {
+#about h1 span {
     color: #000;
+}
+
+#about p {
+    font-family: "Carlito", sans-serif;
+    font-size: 1.1rem;
 }
 
 /* _________________________________ Footer section ______________________________________ */
@@ -928,10 +946,9 @@ footer ul {
         grid-template-rows: repeat(2, 1fr);
     }
 
-    /* header {
-        flex-wrap: wrap;
-        justify-content: center;
-      } */
+    #about img {
+        margin-bottom: 80px;
+    }
 
 }
 

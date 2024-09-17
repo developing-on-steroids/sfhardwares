@@ -1,19 +1,15 @@
 window.onload = function () {
-  // Get the loader and content elements
   const loaderHolder = document.querySelector('.loader_holder');
   const loader = document.querySelector('.loader');
   const content = document.getElementById('content');
 
-  // Initially hide the content (opacity 0)
   content.style.opacity = 0;
-  content.style.display = 'none'; // Ensure the content is initially hidden
+  content.style.display = 'none';
 
-  // Wait for the page to load completely, then add a slight delay
   setTimeout(function () {
-    // Calculate the scale factor to cover the viewport
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
-    const nutSize = 48; // Width and height of the nut in pixels
+    const nutSize = 48;
     const scaleFactor = Math.max(viewportWidth, viewportHeight) / (nutSize / 4);
 
     // Apply the zoom-in scale dynamically
@@ -22,22 +18,21 @@ window.onload = function () {
 
     // After the zoom-in animation completes, hide the loader and fade in the content
     setTimeout(function () {
-      loaderHolder.style.display = 'none'; // Hide the loader
-      content.style.display = 'block'; // Show the content
+      loaderHolder.style.display = 'none';
+      content.style.display = 'block';
 
-      // Apply fade-in effect using opacity transition
-      let opacity = 0; // Start opacity
+      let opacity = 0;
       const fadeInInterval = setInterval(function () {
         opacity += 0.07; // Increase opacity gradually (change this value for speed)
         content.style.opacity = opacity;
 
         if (opacity >= 1) {
-          clearInterval(fadeInInterval); // Stop the fade-in when opacity reaches 1
+          clearInterval(fadeInInterval);
 
 
           // carousel code 
 
-          // Initialize thumbnail (top selector) slider
+          // Industries thumbnail (top selector) slider
           var thumbSlider = new Swiper('.thumb-slider', {
             slidesPerView: 'auto',
             spaceBetween: 5,
@@ -47,7 +42,7 @@ window.onload = function () {
             centerInsufficientSlides: true,
           });
 
-          // Initialize main slider
+          // Industries main slider
           var mainSlider = new Swiper('.main-slider', {
             loop: true,
             autoplay: {
@@ -66,16 +61,16 @@ window.onload = function () {
           // hero carousel
 
           const mySwiper = new Swiper('.my-swiper-container', {
-            loop: true, // Infinite loop
+            loop: true,
             autoplay: {
-              delay: 5000, // Autoplay delay of 2 seconds
+              delay: 5000,
             }
           });
 
           AOS.init({});
         }
-      }, 30); // Adjust this value for smoother transition (lower values make it smoother)
+      }, 30); // Adjust this value for smoother transition of nut to content (lower values will make it smoother)
 
-    }, 1000); // Matches the 1.5s zoom-in transition
-  }, 1500); // Wait for a few seconds (e.g., 3 bounces) before starting the zoom-in
+    }, 1000);
+  }, 1500);
 };
