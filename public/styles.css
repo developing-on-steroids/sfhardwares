@@ -194,7 +194,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: "Carlito", sans-serif;
-    overflow-x: hidden;
 }
 
 a {
@@ -1008,9 +1007,9 @@ footer ul {
         top: 0;
         right: 0;
         height: 100vh;
-        width: 280px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
+        width: 0px;
+        overflow: hidden;
+        transition: width 0.3s ease;
     }
 
     nav ul li {
@@ -1079,6 +1078,11 @@ footer ul {
         max-width: 400px;
         position: relative;
         padding: 20px;
+    }
+
+    #industries .slide-content-flex-img {
+        padding: 0 40px;
+        justify-content: space-evenly;
     }
 
     /* Navigation Buttons */
@@ -1177,5 +1181,5 @@ nav .burger input:checked~span:nth-of-type(3) {
 }
 
 .burger:has(#burger:checked) ~ ul.options {
-    transform: translateX(0);
+    width: 280px;
 }

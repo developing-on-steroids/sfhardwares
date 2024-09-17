@@ -61,15 +61,11 @@ window.onload = function () {
           // hero carousel
 
           const mySwiper = new Swiper('.my-swiper-container', {
-            // loop: true,
-            direction: 'horizontal',
-            loop: false,
-            // autoplay: {
-            //   delay: 5000,
-            // }
+            loop: true,
+            autoplay: {
+              delay: 5000,
+            }
           });
-          
-          mySwiper.slideTo(0, false,false);
 
           AOS.init({});
         }
