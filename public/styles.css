@@ -465,13 +465,13 @@ nav ul li a:hover {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 0 150px;
+    padding: 0 80px;
 }
 
 .product_card {
     margin-right: 50px;
     margin-bottom: 50px;
-    width: 250px;
+    width: 200px;
     background-color: #0C3C78;
     overflow: hidden;
     cursor: pointer;
@@ -488,7 +488,7 @@ nav ul li a:hover {
     position: relative;
     z-index: 20;
     background-color: #0C3C78;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 700;
 }
 
@@ -668,22 +668,36 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-#industries .slide-content img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
-
 #industries .slide-content-flex-img {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-content: flex-start;
     flex-wrap: wrap;
+}
+
+#industries .slide-content-flex-img p {
+    font-size: 0.8rem;
+    width: 130px;
+}
+
+#industries .slide-content-flex-img img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+}
+
+#industries .slide-content ul {
+    margin-left: 50px;
 }
 
 #industries .slide_prod_img {
     margin-right: 5px;
+    margin-top: 20px;
     text-align: center;
+}
+
+#industries .list-heading {
+    margin-top: 20px;
 }
 
 #industries .slide-image {
@@ -866,7 +880,7 @@ footer div {
 
 
 footer div:first-of-type img {
-    height: 120px;
+    height: 100px;
 }
 
 footer #logoDiv {
@@ -940,7 +954,7 @@ footer ul {
 
     .swiper,
     #industries .slide-content h2 {
-        margin-top: 30px;
+        margin-top: 80px;
     }
 
     footer h4,
@@ -955,8 +969,8 @@ footer ul {
     }
 
     #industries .slide-content-flex-img {
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-content: center;
     }
 
     #industries .swiper-slide {
@@ -1057,7 +1071,7 @@ footer ul {
     }
 
     .product_card {
-        width: 200px;
+        width: 170px;
     }
 
     #contact div {
@@ -1082,14 +1096,14 @@ footer ul {
 
     #industries .slide-content-flex-img {
         padding: 0 40px;
-        justify-content: space-evenly;
+        justify-content: flex-start;
     }
 
     /* Navigation Buttons */
     #industries .swiper-button-next,
     #industries .swiper-button-prev {
-        margin-top: 85px;
         --swiper-navigation-sides-offset: 50px;
+        margin-top: 5px;
     }
 
     #industries .slide-image img {

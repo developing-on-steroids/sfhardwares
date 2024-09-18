@@ -23,7 +23,7 @@ window.onload = function () {
 
       let opacity = 0;
       const fadeInInterval = setInterval(function () {
-        opacity += 0.07; // Increase opacity gradually (change this value for speed)
+        opacity += 0.07; // Increase opacity of the nut gradually (change this value for speed)
         content.style.opacity = opacity;
 
         if (opacity >= 1) {
@@ -46,7 +46,7 @@ window.onload = function () {
           var mainSlider = new Swiper('.main-slider', {
             loop: true,
             autoplay: {
-              delay: 3000,
+              delay: 4000,
             },
             navigation: {
               nextEl: '.swiper-button-next',
