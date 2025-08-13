@@ -1,0 +1,426 @@
+:root {
+  --color-dark-bg: #151515;
+  --color-primary: #0A0D57;
+  --color-secondary: #D72727;
+  --color-text-main: #111;
+  --color-text-sub: #555;
+
+  --font-display: 'Livvic', sans-serif;
+  --font-body: 'Carlito', sans-serif;
+}
+
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 70px 100px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-wrapper {
+  max-width: 1020px;
+}
+
+.hero-content {
+  width: 50%;
+  min-width: 600px;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-family: 'Livvic', sans-serif;
+  font-size: 3.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+  /* margin-top: 30px; */
+}
+
+.hero-content h1 span {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #fff;
+  padding: 0 10px;
+}
+
+/* Highlight effect using a ::before element */
+.hero-content h1 span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #DA1212;
+  z-index: -1;
+  /* Places it behind the text */
+
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-out;
+}
+
+/* Animate the highlight on load */
+.hero-content h1 span.animate::before {
+  transform: translateX(0);
+}
+
+
+/* Animate on hover/focus */
+/* .hero-content h1 span:hover::after,
+.hero-content h1 span:focus::after {
+  transform: translateX(0);
+} */
+
+
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cta-buttons img {
+  width: 20px
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  font-family: 'Carlito', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  border: 2px solid transparent;
+}
+
+.call-btn {
+  background-color: #DA1212;
+  color: #fff;
+  /* border: 2px solid #DA1212; */
+}
+
+.hero-image-port {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.hero-image {
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+/* ________________________________Product Page Products Section Styling________________________ */
+
+.product-page-products {
+  padding: 40px 100px;
+}
+
+.product-page-products h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+  font-weight: 700;
+  /* text-transform: uppercase; */
+}
+
+.product-page-products p strong {
+  color: #AE3018;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Livvic', sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.35;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+/* Grid */
+.cards-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin-top: 50px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 4px 14px rgba(15, 15, 15, 0.06);
+  border: 1px solid rgba(15, 15, 15, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #f4f4f4;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.card-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.card-sub {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  color: #555;
+}
+
+.card:hover .card-media img {
+  transform: scale(1.04);
+}
+
+.grades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.grade-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #fff;
+  background: #d04b17; /* Change to brand color */
+  padding: 2px 6px;
+  border-radius: 999px;
+  line-height: 1;
+}
+
+
+/* Modal styles */
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+/* __________________________________________ FAQ Section ___________________________________________ */
+
+.faq-section {
+  padding: 40px 100px;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.faq-container {
+  /* max-width: 800px; */
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff; /* White title for contrast */
+  padding: 0 15px;
+  text-decoration: underline;
+  text-decoration-color: #DA1212;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.faq-question {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 14px 0;
+  color: #fff; /* White question text */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+  transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85); /* Lightened white for readability */
+  border-color: rgba(255, 255, 255, 0.2);
+  line-height: 1.5;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.open {
+  max-height: 300px;
+  padding-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .faq-title {
+    font-size: 1.5rem;
+  }
+  .faq-question {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .faq-section {
+  padding: 40px 20px;
+}
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+
+  .hero-image-port {
+    position: static;
+    /* margin-top: 20px; */
+    /* width: 100%; */
+  }
+
+    .hero-image {
+    position: static;
+    /* margin-top: 20px; */
+    /* width: 100%; */
+  }
+
+  .hero-wrapper {
+    max-width: auto;
+  }
+
+  .hero-content {
+    min-width: auto;
+    width: auto;
+  }
+
+  .btn {
+    padding: 12px 20px;
+  }
+
+  .product-page-products {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+   .product-page-products h2 {
+    font-size: 1.8rem;
+   }
+}

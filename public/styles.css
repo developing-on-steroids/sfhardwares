@@ -235,6 +235,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    z-index: 9999 !important;
+    position: relative;
 }
 
 nav img {
@@ -268,11 +270,110 @@ nav ul li a:hover {
     color: #F33535;
 }
 
+/* Dropdown Container */
+nav .dropdown {
+    position: relative;
+    z-index: 100;
+}
+
+/* Dropdown Menu Hidden by Default */
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    min-width: 340px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* Dropdown Menu Item */
+nav .dropdown-menu li {
+    margin: 0;
+    padding: 8px 20px;
+    /* white-space: nowrap; */
+    border: 0.5px solid #f2f2ff;
+}
+
+nav .dropdown-menu li a {
+    color: #0C3C78;
+    font-weight: 500;
+    transition: 0.2s ease;
+    text-transform: none;
+}
+
+nav .dropdown-menu li:hover {
+    background-color: #e7e7ea;
+}
+
+nav .dropdown-menu li:hover a {
+    color: #DA1212;
+}
+
+nav .dropdown-menu li a:hover {
+    text-decoration: none !important;
+}
+
+/* Show on Hover */
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-wrapper:has(.mobile-dropdown-toggle:checked) .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown Scrollbar – Chrome, Safari, Opera */
+nav .dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+nav .dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav .dropdown-menu:hover::-webkit-scrollbar-thumb {
+    background-color: #0C3C78;
+}
+
+nav .dropdown-menu::-webkit-scrollbar-thumb:active {
+    background-color: #0C3C78;
+}
+
+/* Dropdown Scrollbar – Firefox */
+nav .dropdown-menu {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.3s ease-in-out;
+}
+
+nav .dropdown-menu:hover {
+    scrollbar-color: #0C3C78 transparent;
+}
+
+.mobile-dropdown-toggle,
+.mobile-dropdown-label {
+    display: none;
+}
+
 /* __________________________________ HERO SECTION STYLING __________________________________ */
 
 #hero .my-swiper-container {
     width: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 
 #hero .swiper-slide {
@@ -490,6 +591,11 @@ nav ul li a:hover {
     background-color: #0C3C78;
     font-size: 0.9rem;
     font-weight: 700;
+}
+
+.products_container a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .product_card:hover {
@@ -787,6 +893,8 @@ nav ul li a:hover {
 
 .sf-cont-bottom {
     margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 1.1rem;
 }
 
 #contact h5 {
@@ -1014,8 +1122,9 @@ footer ul {
     nav ul {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: start;
+        justify-content: start;
+        padding-top: 50px;
         background-color: #fff;
         position: fixed;
         top: 0;
@@ -1029,12 +1138,88 @@ footer ul {
     nav ul li {
         margin: 0;
         margin-bottom: 40px;
+        padding-left: 20px;
     }
 
     nav .burger {
         display: block;
         margin-right: 50px;
         z-index: 25;
+    }
+
+    nav .dropdown-menu {
+        position: static;
+        max-height: none;
+        box-shadow: none;
+    }
+
+    .desktop-dropdown-toggle {
+        display: none;
+    }
+
+    .mobile-dropdown-label {
+        display: block;
+        cursor: pointer;
+        font-family: "Livvic", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        color: #0C3C78;
+        transition: color 0.2s;
+    }
+
+    .mobile-dropdown-label:hover {
+        color: #F33535;
+    }
+
+    .mobile-dropdown-toggle {
+        display: none;
+    }
+
+    .mobile-dropdown-toggle:checked+.dropdown-menu {
+        display: block;
+    }
+
+    /* Override default hidden state */
+    nav .dropdown-menu {
+        display: none;
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+        max-height: none;
+        background-color: #fff;
+        z-index: auto;
+        height: 300px;
+        overflow-y: scroll;
+    }
+
+    /* WebKit Scrollbar */
+    nav .dropdown-menu::-webkit-scrollbar {
+        width: 8px;
+        background: transparent;
+    }
+
+    nav .dropdown-menu::-webkit-scrollbar-thumb {
+        background-color: #0C3C78;
+        border-radius: 10px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    nav .dropdown-menu::-webkit-scrollbar-thumb:active {
+        background-color: #0C3C78;
+    }
+
+    /* Show on Hover */
+    nav .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown-wrapper:has(.mobile-dropdown-toggle:checked) .dropdown-menu {
+        display: block;
     }
 
     #heroSquareTwo {
@@ -1194,6 +1379,27 @@ nav .burger input:checked~span:nth-of-type(3) {
     left: 3.5px;
 }
 
-.burger:has(#burger:checked) ~ ul.options {
-    width: 280px;
+.burger:has(#burger:checked)~ul.options {
+    width: 370px;
 }
+
+.floating-whatsapp img {
+    width: 65px;
+    height: auto;
+}
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.floating-whatsapp:hover {
+    /* scale: 1.1; */
+    transform: translateY(-10px);
+    filter: drop-shadow(0px 11px 4px rgba(37, 211, 102, 0.25));
+}
+

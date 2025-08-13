@@ -74,3 +74,40 @@ window.onload = function () {
     }, 1000);
   }, 1500);
 };
+
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelector('.hero-content h1 span').classList.add('animate');
+  }, 4500); //
+});
+
+function openModal(el) {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImg");
+  const imgSrc = el.querySelector("img").src;
+
+  modal.style.display = "flex";
+  modalImg.src = imgSrc;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+document.querySelectorAll(".faq-question").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const isExpanded = btn.getAttribute("aria-expanded") === "true";
+
+    // Close all
+    document.querySelectorAll(".faq-question").forEach((b) => {
+      b.setAttribute("aria-expanded", "false");
+      b.nextElementSibling.classList.remove("open");
+    });
+
+    // Open clicked if not already expanded
+    if (!isExpanded) {
+      btn.setAttribute("aria-expanded", "true");
+      btn.nextElementSibling.classList.add("open");
+    }
+  });
+});
