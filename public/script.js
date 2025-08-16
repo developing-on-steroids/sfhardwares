@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const pageData = {
-  "ANCHOR-FASTENERS-supplier-in-Chennai%0a": {
+  "ANCHOR-FASTENERS-supplier-in-Chennai": {
     title: "Anchor Fasteners Supplier in Chennai%0a",
     text: "SF Hardwares and Suppliers is the leading supplier of  Chemical Anchors, Wedge Anchors, Rawal Type Anchors, Bolt Type Anchors, Shell Anchors, Pin type Anchors all across Chennai%0a"
   },
@@ -177,7 +177,7 @@ const pageData = {
     title: "Fasteners For Windmills Manufacturing",
     text: "SF Hardwares and Suppliers is the Leading Supplier of All Types of Fasteners for Windmills Manufacturing like High Tensile and MS Bolts with Plating accross Chennai, Tamil Nadu and South India%0a"
   },
-  "FOUNDATION-BOLT-supplier-in-Chennai%0a": {
+  "FOUNDATION-BOLT-supplier-in-Chennai": {
     title: "Foundation Bolt Supplier in Chennai%0a",
     text: "SF Hardwares and Suppliers is the leading supplier of  Garde 4.6 and 8.8 L, J, T and Square Type Foundation Bolts and Sag Rods all accross Chennai%0a"
   },
@@ -185,7 +185,7 @@ const pageData = {
     title: "Foundation Bolt Supplier in Tamil Nadu",
     text: "SF Hardwares and Suppliers is the leading supplier of  Garde 4.6 and 8.8 L, J, T, and Square Type Foundation Bolts and Sag Rods all accross Tamil Nadu and South India%0a"
   },
-  "GI-NUT-BOLT-supplier-in-Chennai%0a": {
+  "GI-NUT-BOLT-supplier-in-Chennai": {
     title: "GI Nut Bolt Supplier in Chennai%0a",
     text: "SF Hardwares and Suppliers is the leading supplier of  GI (Electro Plated) Garde 4.6 and 5.6 Bolts, Nuts, Spring Washers and Round Washers all across Chennai%0a"
   },
@@ -193,7 +193,7 @@ const pageData = {
     title: "GI Nut Bolt Supplier in Tamil Nadu",
     text: "SF Hardwares and Suppliers is the leading supplier of  GI (Electro Plated) Garde 4.6 and 5.6 Bolts, Nuts, Spring Washers and Round Washers all across Tamil Nadu and South India%0a"
   },
-  "GOLDEN-YELLOW-PLATING-FASTENERS-supplier-in-Chennai%0a": {
+  "GOLDEN-YELLOW-PLATING-FASTENERS-supplier-in-Chennai": {
     title: "Golden Yellow Plating Fasteners Supplier in Chennai%0a",
     text: "SF Hardwares and Suppliers is the leading supplier of  Garde 4.6 and 5.6 Golden (Yellow) Plated Bolts, Nuts, Spring Washers and Round Washers all across Chennai%0a"
   },
@@ -209,7 +209,7 @@ const pageData = {
     title: "High Tensile Fasteners Supplier in Tamil Nadu",
     text: "SF Hardwares and Suppliers is the leading supplier of  Garde 8.8, 10.9 High Tensile Bolts and Nuts  Bolts, Nuts, Spring Washers and Round Washers all across Tamil Nadu and South India%0a"
   },
-  "HILLSIDE-WASHER-supplier-in-Chennai%0a": {
+  "HILLSIDE-WASHER-supplier-in-Chennai": {
     title: "Hillside Washer Supplier in Chennai%0a",
     text: "SF Hardwares and Suppliers is the leading supplier of  Garde 4.6 Hillside Washers all accross Chennai%0a"
   },
@@ -217,7 +217,7 @@ const pageData = {
     title: "Hillside Washer Supplier in Tamil Nadu",
     text: "SF Hardwares and Suppliers is the leading supplier of  Garde 4.6 Hillside Washers all accross Tamil Nadu and South India%0a"
   },
-  "HOT-DIP-GALVANIZED-BOLTS-AND-NUTS-supplier-in-Chennai%0a": {
+  "HOT-DIP-GALVANIZED-BOLTS-AND-NUTS-supplier-in-Chennai": {
     title: "Hot Dip Galvanized Bolts and Nuts Supplier in Chennai%0a",
     text: "SF Hardwares and Suppliers is the leading supplier of  Garde 4.6, 5.6 and 8.8 Hot Dip Galvanized Bolts and Nuts  Bolts, Nuts, Spring Washers and Round Washers all across Chennai%0a"
   },
@@ -225,7 +225,7 @@ const pageData = {
     title: "Hot Dip Galvanized Bolts and Nuts Supplier in Tamil Nadu",
     text: "SF Hardwares and Suppliers is the leading supplier of  Garde 4.6, 5.6 and 8.8 Hot Dip Galvanized Bolts and Nuts  Bolts, Nuts, Spring Washers and Round Washers all across Tamil Nadu and South India%0a"
   },
-  "MS-NUT-BOLT-supplier-in-Chennai%0a": {
+  "MS-NUT-BOLT-supplier-in-Chennai": {
     title: "MS Nut Bolt Supplier in Chennai%0a",
     text: "SF Hardwares and Suppliers is the leading supplier of  MS Garde 4.6 and 5.6 Bolts, Nuts, Spring Washers and Round Washers all across Chennai%0a"
   },
@@ -233,7 +233,7 @@ const pageData = {
     title: "MS Nut Bolt Supplier in Tamil Nadu",
     text: "SF Hardwares and Suppliers is the leading supplier of  MS Garde 4.6 and 5.6 Bolts, Nuts, Spring Washers and Round Washers all across Tamil Nadu and South India%0a"
   },
-  "SS-FASTENERS-supplier-in-Chennai%0a": {
+  "SS-FASTENERS-supplier-in-Chennai": {
     title: "SS Fasteners Supplier in Chennai%0a",
     text: "SF Hardwares and Suppliers is the leading supplier of  SS Garde 202, 304, and 316 Bolts and Nuts  Bolts, Nuts, Spring Washers and Round Washers all across Chennai%0a"
   },
@@ -241,7 +241,7 @@ const pageData = {
     title: "SS Fasteners Supplier in Tamil Nadu",
     text: "SF Hardwares and Suppliers is the leading supplier of  SS Garde 202, 304, and 316 Bolts and Nuts  Bolts, Nuts, Spring Washers and Round Washers all across Tamil Nadu and South India%0a"
   },
-  "TAPER-WASHER-supplier-in-Chennai%0a": {
+  "TAPER-WASHER-supplier-in-Chennai": {
     title: "Taper Washer Supplier in Chennai%0a",
     text: "SF Hardwares and Suppliers is the leading supplier of  Garde 4.6 Taper Washers all accross Chennai%0a"
   },
