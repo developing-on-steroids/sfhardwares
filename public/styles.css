@@ -1403,3 +1403,56 @@ nav .burger input:checked~span:nth-of-type(3) {
     filter: drop-shadow(0px 11px 4px rgba(37, 211, 102, 0.25));
 }
 
+
+/* ___________________________________________SHARE BUTTON STYLING_______________________________ */
+
+/* Outline Share Button */
+.btn-share-outline {
+  background-color: var(--white, #fff);
+  color: var(--brand-blue, #0C3C78);
+  font-family: "Livvic", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  padding: 14px 48px;
+  border: 2px solid var(--brand-blue, #0C3C78);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: block;             /* makes it occupy full line */
+  margin: 20px auto;          /* always centered */
+  max-width: 360px;           /* longer, but not too wide */
+  width: 100%;                /* scales responsively */
+  text-align: center;
+  letter-spacing: 0.6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.btn-share-outline:hover {
+  background-color: var(--brand-blue, #0C3C78);
+  color: var(--white, #fff);
+  border-color: var(--brand-blue, #0C3C78);
+  transform: translateY(-2px);
+}
+
+.btn-share-outline:active {
+  transform: translateY(0);
+  background-color: #082b57; /* slightly darker blue */
+  border-color: #082b57;
+}
+
+.btn-share-outline:focus {
+  outline: 2px solid var(--brand-red, #F33535);
+  outline-offset: 4px;
+}
+
+/* Mobile tweaks */
+@media screen and (max-width: 680px) {
+  .btn-share-outline {
+    font-size: 1rem;
+    padding: 12px 32px;
+    max-width: 100%;   /* takes the whole width */
+  }
+}
+
+
