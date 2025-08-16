@@ -256,8 +256,14 @@ const pageData = {
 document.getElementById("shareBtn").addEventListener("click", () => {
   const currentUrl = window.location.href;
   const parts = currentUrl.split("/");
-  const lastPart = parts.pop() || parts.pop();
-  const data = pageData[lastPart];
+  let lastPart = parts.pop() || parts.pop(); // handle trailing slash
+  let data = pageData[lastPart];
+
+  // If no data found, try removing .html
+  if (!data && lastPart.endsWith(".html")) {
+    lastPart = lastPart.replace(/\.html$/, "");
+    data = pageData[lastPart];
+  }
 
   if (!data) {
     alert("No share data found for this page.");
@@ -266,12 +272,12 @@ document.getElementById("shareBtn").addEventListener("click", () => {
 
   if (navigator.share) {
     navigator.share({
-        title: data.title,
-        text: data.text,
-        url: currentUrl
-      })
-      .then(() => console.log("Share successful"))
-      .catch((error) => console.error("Error sharing", error));
+      title: data.title,
+      text: data.text,
+      url: currentUrl
+    })
+    .then(() => console.log("Share successful"))
+    .catch((error) => console.error("Error sharing", error));
   } else {
     alert("Web Share API is not supported in this browser.");
   }
