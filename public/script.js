@@ -111,3 +111,21 @@ document.querySelectorAll(".faq-question").forEach((btn) => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".product-page-products");
+
+  sections.forEach(section => {
+    const heading = section.querySelector("h3");
+
+    heading.addEventListener("click", () => {
+      // Collapse all other sections
+      sections.forEach(s => {
+        if (s !== section) s.classList.remove("active");
+      });
+
+      // Toggle clicked section
+      section.classList.toggle("active");
+    });
+  });
+});
